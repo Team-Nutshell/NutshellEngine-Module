@@ -1,16 +1,10 @@
 #pragma once
-#include "../external/Common/ecs.h"
-#include "utils/ntsh_dynamic_library.h"
-#include <string>
+#include "ntsh_module_interface.h"
+#include "../external/Common/ntsh_module_interface.h"
 
-class NTSH_MODULE_API NutshellModule : public System {
-private:
-
+class NutshellModule : public NutshellModuleInterface {
 public:
-    // Public API
     void init();
     void update(double dt);
     void destroy();
-
-    std::string getName();
 };
