@@ -4,6 +4,8 @@
 
 class NutshellModule : public NutshellModuleInterface {
 public:
+    NutshellModule() : NutshellModuleInterface("NutshellModule") {}
+
     void init();
     void update(double dt);
     void destroy();

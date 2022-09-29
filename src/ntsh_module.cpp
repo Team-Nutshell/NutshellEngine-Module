@@ -4,16 +4,16 @@
 #include "../external/Common/ntsh_engine_enums.h"
 
 void NutshellModule::init() {
-    NTSH_MODULE_ERROR("init() function not implemented.", NTSH_RESULT_UNKNOWN_ERROR);
+    NTSH_MODULE_ERROR("init() function not implemented.", NTSH_RESULT_MODULE_FUNCTION_NOT_IMPLEMENTED);
 }
 
 void NutshellModule::update(double dt) {
     NTSH_UNUSED(dt);
-    NTSH_MODULE_ERROR("update() function not implemented.", NTSH_RESULT_UNKNOWN_ERROR);
+    NTSH_MODULE_ERROR("update() function not implemented.", NTSH_RESULT_MODULE_FUNCTION_NOT_IMPLEMENTED);
 }
 
 void NutshellModule::destroy() {
-    NTSH_MODULE_ERROR("destroy() function not implemented.", NTSH_RESULT_UNKNOWN_ERROR);
+    NTSH_MODULE_ERROR("destroy() function not implemented.", NTSH_RESULT_MODULE_FUNCTION_NOT_IMPLEMENTED);
 }
 
 extern "C" NTSH_MODULE_API NutshellModuleInterface* createModule() {
