@@ -4,13 +4,13 @@
 #ifndef NDEBUG
 #define NTSH_MODULE_INFO(message) \
 	do { \
-#ifdef NTSH_MODULE_GRAPHICS
+#ifdef NTSH_CURRENT_MODULE_GRAPHICS
 		std::cerr << "\33[1m\33[92mGRAPHICS ";
-#elif NTSH_MODULE_PHYSICS
+#elif NTSH_CURRENT_MODULE_PHYSICS
 		std::cerr << "\33[1m\33[35mPHYSICS ";
-#elif NTSH_MODULE_WINDOW
+#elif NTSH_CURRENT_MODULE_WINDOW
 		std::cerr << "\33[1m\33[93mWINDOW ";
-#elif NTSH_MODULE_AUDIO
+#elif NTSH_CURRENT_MODULE_AUDIO
 		std::cerr << "\33[1m\33[34mAUDIO ";
 #else
 		std::cerr << "\33[1mUNKNOWN ";
@@ -26,13 +26,13 @@
 #ifndef NDEBUG
 #define NTSH_MODULE_WARNING(message) \
 	do { \
-#ifdef NTSH_MODULE_GRAPHICS
+#ifdef NTSH_CURRENT_MODULE_GRAPHICS
 		std::cerr << "\33[1m\33[92mGRAPHICS ";
-#elif NTSH_MODULE_PHYSICS
+#elif NTSH_CURRENT_MODULE_PHYSICS
 		std::cerr << "\33[1m\33[35mPHYSICS ";
-#elif NTSH_MODULE_WINDOW
+#elif NTSH_CURRENT_MODULE_WINDOW
 		std::cerr << "\33[1m\33[93mWINDOW ";
-#elif NTSH_MODULE_AUDIO
+#elif NTSH_CURRENT_MODULE_AUDIO
 		std::cerr << "\33[1m\33[34mAUDIO ";
 #else
 		std::cerr << "\33[1mUNKNOWN ";
@@ -48,13 +48,13 @@
 #ifndef NDEBUG
 #define NTSH_MODULE_ERROR(message, code) \
 	do { \
-#ifdef NTSH_MODULE_GRAPHICS
+#ifdef NTSH_CURRENT_MODULE_GRAPHICS
 		std::cerr << "\33[1m\33[92mGRAPHICS ";
-#elif NTSH_MODULE_PHYSICS
+#elif NTSH_CURRENT_MODULE_PHYSICS
 		std::cerr << "\33[1m\33[35mPHYSICS ";
-#elif NTSH_MODULE_WINDOW
+#elif NTSH_CURRENT_MODULE_WINDOW
 		std::cerr << "\33[1m\33[93mWINDOW ";
-#elif NTSH_MODULE_AUDIO
+#elif NTSH_CURRENT_MODULE_AUDIO
 		std::cerr << "\33[1m\33[34mAUDIO ";
 #else
 		std::cerr << "\33[1mUNKNOWN ";
