@@ -13,7 +13,7 @@
 	#define NTSH_MODULE_MESSAGE_PREFIX  "\33[1mUNKNOWN "
 #endif
 
-#ifndef NDEBUG
+#ifdef NTSH_DEBUG
 #define NTSH_MODULE_INFO(message) \
 	do { \
 		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << "\33[39mMODULE \33[34mINFO\33[39m\33[0m: " << message << std::endl; \
@@ -24,7 +24,7 @@
 	} while(0)
 #endif
 
-#ifndef NDEBUG
+#ifdef NTSH_DEBUG
 #define NTSH_MODULE_WARNING(message) \
 	do { \
 		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << "\33[39mMODULE \33[93mWARNING\33[39m\33[0m: " << message << std::endl; \
@@ -35,7 +35,7 @@
 	} while(0)
 #endif
 
-#ifndef NDEBUG
+#ifdef NTSH_DEBUG
 #define NTSH_MODULE_ERROR(message, code) \
 	do { \
 		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << "\33[39mMODULE \33[31mERROR\33[39m\33[0m: " << message << std::endl; \
