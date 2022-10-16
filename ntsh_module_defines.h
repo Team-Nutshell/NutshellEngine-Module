@@ -51,7 +51,7 @@
 #ifdef NTSH_DEBUG
 #define NTSH_MODULE_FUNCTION_NOT_IMPLEMENTED() \
 	do { \
-		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << "FUNCTION NOT IMPLEMENTED: " << __func__ << std::endl; \
+		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << "MODULE FUNCTION NOT IMPLEMENTED: " << __func__ << std::endl; \
 	} while(0)
 #else
 #define NTSH_MODULE_FUNCTION_NOT_IMPLEMENTED() \
