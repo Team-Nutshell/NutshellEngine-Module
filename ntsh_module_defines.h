@@ -47,3 +47,15 @@
 		exit(code); \
 	} while(0)
 #endif
+
+#ifdef NTSH_DEBUG
+#define NTSH_FUNCTION_NOT_IMPLEMENTED(function) \
+	do { \
+		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << #function << " not implemented." << std::endl; \
+	} while(0)
+#endif
+#else
+#define NTSH_FUNCTION_NOT_IMPLEMENTED(function) \
+	do { \
+	} while(0)
+#endif
