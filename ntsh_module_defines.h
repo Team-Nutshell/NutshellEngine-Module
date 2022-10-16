@@ -49,13 +49,12 @@
 #endif
 
 #ifdef NTSH_DEBUG
-#define NTSH_FUNCTION_NOT_IMPLEMENTED() \
+#define NTSH_MODULE_FUNCTION_NOT_IMPLEMENTED() \
 	do { \
 		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << "FUNCTION NOT IMPLEMENTED: " << __func__ << std::endl; \
 	} while(0)
-#endif
 #else
-#define NTSH_FUNCTION_NOT_IMPLEMENTED() \
+#define NTSH_MODULE_FUNCTION_NOT_IMPLEMENTED() \
 	do { \
 	} while(0)
 #endif
