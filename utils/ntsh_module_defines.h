@@ -38,13 +38,13 @@
 #ifdef NTSH_DEBUG
 #define NTSH_MODULE_ERROR(message, code) \
 	do { \
-		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << "\33[39mMODULE \33[31mERROR\33[39m\33[0m: " << message << std::endl; \
-		exit(code); \
+		std::cerr << NTSH_MODULE_MESSAGE_PREFIX << "\33[39mMODULE \33[31mERROR\33[39m\33[0m: " << message << " (" << #code << ")" << std::endl; \
+		exit(1); \
 	} while(0)
 #else
 #define NTSH_MODULE_ERROR(message, code) \
 	do { \
-		exit(code); \
+		exit(1); \
 	} while(0)
 #endif
 
