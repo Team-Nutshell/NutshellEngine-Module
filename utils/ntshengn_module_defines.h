@@ -1,0 +1,60 @@
+#pragma once
+#include <iostream>
+
+#if defined(NTSHENGN_CURRENT_MODULE_GRAPHICS)
+	#define NTSHENGN_MODULE_MESSAGE_PREFIX "\33[1m\33[92mGRAPHICS "
+#elif defined(NTSHENGN_CURRENT_MODULE_PHYSICS)
+	#define NTSHENGN_MODULE_MESSAGE_PREFIX "\33[1m\33[35mPHYSICS "
+#elif defined(NTSHENGN_CURRENT_MODULE_WINDOW)
+	#define NTSHENGN_MODULE_MESSAGE_PREFIX "\33[1m\33[93mWINDOW "
+#elif defined(NTSHENGN_CURRENT_MODULE_AUDIO)
+	#define NTSHENGN_MODULE_MESSAGE_PREFIX "\33[1m\33[34mAUDIO "
+#else
+	#define NTSHENGN_MODULE_MESSAGE_PREFIX  "\33[1mUNKNOWN "
+#endif
+
+#if defined(NTSHENGN_DEBUG)
+#define NTSHENGN_MODULE_INFO(message) \
+	do { \
+		std::cerr << NTSHENGN_MODULE_MESSAGE_PREFIX << "\33[39mMODULE \33[34mINFO\33[39m\33[0m: " << message << std::endl; \
+	} while(0)
+#else
+#define NTSHENGN_MODULE_INFO(message) \
+	do { \
+	} while(0)
+#endif
+
+#if defined(NTSHENGN_DEBUG)
+#define NTSHENGN_MODULE_WARNING(message) \
+	do { \
+		std::cerr << NTSHENGN_MODULE_MESSAGE_PREFIX << "\33[39mMODULE \33[93mWARNING\33[39m\33[0m: " << message << std::endl; \
+	} while(0)
+#else
+#define NTSHENGN_MODULE_WARNING(message) \
+	do { \
+	} while(0)
+#endif
+
+#if defined(NTSHENGN_DEBUG)
+#define NTSHENGN_MODULE_ERROR(message, code) \
+	do { \
+		std::cerr << NTSHENGN_MODULE_MESSAGE_PREFIX << "\33[39mMODULE \33[31mERROR\33[39m\33[0m: " << message << " (" << #code << ")" << std::endl; \
+		exit(1); \
+	} while(0)
+#else
+#define NTSHENGN_MODULE_ERROR(message, code) \
+	do { \
+		exit(1); \
+	} while(0)
+#endif
+
+#if defined(NTSHENGN_DEBUG)
+#define NTSHENGN_MODULE_FUNCTION_NOT_IMPLEMENTED() \
+	do { \
+		std::cerr << NTSHENGN_MODULE_MESSAGE_PREFIX << "\33[39mMODULE\33[0m FUNCTION NOT IMPLEMENTED: " << __func__ << std::endl; \
+	} while(0)
+#else
+#define NTSHENGN_MODULE_FUNCTION_NOT_IMPLEMENTED() \
+	do { \
+	} while(0)
+#endif
