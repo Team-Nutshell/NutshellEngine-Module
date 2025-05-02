@@ -39,13 +39,13 @@
 #endif
 
 #if defined(NTSHENGN_DEBUG)
-#define NTSHENGN_MODULE_ERROR(message, code) \
+#define NTSHENGN_MODULE_ERROR(message) \
 	do { \
-		std::cerr << NTSHENGN_MODULE_MESSAGE_PREFIX + "\33[39mMODULE \33[31mERROR\33[39m\33[0m: " + std::string(message) + " (" + std::string(#code) + ")" << std::endl; \
+		std::cerr << NTSHENGN_MODULE_MESSAGE_PREFIX + "\33[39mMODULE \33[31mERROR\33[39m\33[0m: " + std::string(message) << std::endl; \
 		exit(1); \
 	} while(0)
 #else
-#define NTSHENGN_MODULE_ERROR(message, code) \
+#define NTSHENGN_MODULE_ERROR(message) \
 	do { \
 		exit(1); \
 	} while(0)
